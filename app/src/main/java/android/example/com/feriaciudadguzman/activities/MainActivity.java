@@ -1,6 +1,10 @@
-package android.example.com.feriaciudadguzman;
+package android.example.com.feriaciudadguzman.activities;
 
 import android.content.res.Configuration;
+import android.example.com.feriaciudadguzman.R;
+import android.example.com.feriaciudadguzman.fragments.HomeFragment;
+import android.example.com.feriaciudadguzman.fragments.InformationFragment;
+import android.example.com.feriaciudadguzman.fragments.LandmarksFragment;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -11,8 +15,6 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -88,14 +90,14 @@ public class MainActivity extends AppCompatActivity {
         Fragment fragment = null;
         Class fragmentClass;
         switch(menuItem.getItemId()) {
-            case R.id.nav_first_fragment:
+            case R.id.nav_home_fragment:
+                fragmentClass = HomeFragment.class;
+                break;
+            case R.id.nav_info_fragment:
                 fragmentClass = InformationFragment.class;
                 break;
-            case R.id.nav_second_fragment:
-                fragmentClass = InformationFragment.class;
-                break;
-            case R.id.nav_third_fragment:
-                fragmentClass = InformationFragment.class;
+            case R.id.nav_landmarks_fragment:
+                fragmentClass = LandmarksFragment.class;
                 break;
             default:
                 fragmentClass = InformationFragment.class;

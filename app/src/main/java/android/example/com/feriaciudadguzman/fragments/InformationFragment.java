@@ -1,5 +1,6 @@
-package android.example.com.feriaciudadguzman;
+package android.example.com.feriaciudadguzman.fragments;
 
+import android.example.com.feriaciudadguzman.R;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;

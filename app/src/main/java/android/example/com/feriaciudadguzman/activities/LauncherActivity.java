@@ -1,13 +1,10 @@
-package android.example.com.feriaciudadguzman;
+package android.example.com.feriaciudadguzman.activities;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.support.v7.app.ActionBar;
+import android.example.com.feriaciudadguzman.R;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.MotionEvent;
-import android.view.View;
 
 public class LauncherActivity extends AppCompatActivity {
 
