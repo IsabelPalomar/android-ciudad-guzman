@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content" android:layout_width="wrap_content">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_first_fragment"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="Info" />
+
+        <item
+            android:id="@+id/nav_second_fragment"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="Attractions" />
+
+        <item
+            android:id="@+id/nav_third_fragment"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="Events" />
+
+        <item
+            android:id="@+id/nav_fourth_fragment"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="Restaurants" />
+        <item
+            android:id="@+id/nav_five_fragment"
+            android:icon="@drawable/ic_favorite_black_24dp"
+            android:title="Bars" />
+
+        <item android:title="Sub items">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:icon="@drawable/ic_favorite_black_24dp"
+                        android:title="Sub item 1" />
+                    <item
+                        android:icon="@drawable/ic_favorite_black_24dp"
+                        android:title="Sub item 2" />
+                </group>
+            </menu>
+        </item>
+    </group>
+</menu>
