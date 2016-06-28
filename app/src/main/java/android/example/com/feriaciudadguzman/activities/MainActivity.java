@@ -5,6 +5,7 @@ import android.example.com.feriaciudadguzman.R;
 import android.example.com.feriaciudadguzman.fragments.HomeFragment;
 import android.example.com.feriaciudadguzman.fragments.InformationFragment;
 import android.example.com.feriaciudadguzman.fragments.LandmarksFragment;
+import android.example.com.feriaciudadguzman.fragments.RestaurantsFragment;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -98,6 +99,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.nav_landmarks_fragment:
                 fragmentClass = LandmarksFragment.class;
+                break;
+            case R.id.nav_restaurants_fragment:
+                fragmentClass = RestaurantsFragment.class;
                 break;
             default:
                 fragmentClass = InformationFragment.class;
