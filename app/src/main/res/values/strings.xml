@@ -1,10 +1,19 @@
 <resources>
     <string name="app_name">"Feria Ciudad Guzman "</string>
+    <string name="app_place_name">Ciudad Guzman</string>
+    <string name="app_place_description">
+        "Ciudad Guzmán (also known as simply Guzmán) is a city in the Mexican state of Jalisco. It is located at 19°42′N 103°28′WCoordinates: 19°42′N 103°28′W, 124 km south of Guadalajara, at a height of 1,507 meters above sea level.\n\n"
+        "The town has been nicknamed the "Athens of Jalisco" because it's the birthplace of several well-known intellectuals and artists, including the muralist José Clemente Orozco, the composer Consuelo Velázquez, the scientist José María Arreola and the journalist and historian Juan José Arreola.\n\n"
+        "The oldest part of the city, in the downtown area, holds a major stone Cathedral (Catedral de San José) that local folklore says is haunted. Ciudad Guzmán is located in an area of high seismic activity. The cathedral’s towers have tumbled down several times due to earthquakes, sometimes killing people, and their souls are said to guard the place."
+    </string>
 
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="action_settings">Settings</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
