@@ -34,7 +34,6 @@ public class EventsRecyclerAdapter extends RecyclerView.Adapter<EventsRecyclerAd
     public class EventViewHolder extends RecyclerView.ViewHolder {
         CardView cv;
         TextView eventName;
-        TextView eventDesc;
         ImageView eventImg;
 
         EventViewHolder(View itemView) {
@@ -60,11 +59,9 @@ public class EventsRecyclerAdapter extends RecyclerView.Adapter<EventsRecyclerAd
 
             @Override
             public void onClick(View view) {
-                //Start google maps
-                Uri gmmIntentUri = Uri.parse("geo:0,0?q=" + Uri.encode(events.get(position).getAddress()));
-                Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-                mapIntent.setPackage("com.google.android.apps.maps");
-                context.startActivity(mapIntent);
+                //Open event link
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(events.get(position).getUrl()));
+                context.startActivity(browserIntent);
             }
 
         });

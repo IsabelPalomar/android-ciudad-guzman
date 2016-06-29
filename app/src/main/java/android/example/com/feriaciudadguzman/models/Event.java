@@ -5,13 +5,13 @@ public class Event {
 
     private String name;
     private String description;
-    private String address;
+    private String url;
     private int imageId;
 
-    public Event(String name, String description, String address, int imageId) {
+    public Event(String name, String description, String url, int imageId) {
         this.name = name;
         this.description = description;
-        this.address = address;
+        this.url = url;
         this.imageId = imageId;
     }
 
@@ -23,8 +23,8 @@ public class Event {
         return description;
     }
 
-    public String getAddress() {
-        return address;
+    public String getUrl() {
+        return url;
     }
 
     public int getImageId() {

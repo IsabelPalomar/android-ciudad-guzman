@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/event_card_view"
     android:layout_width="150dp"
     android:layout_height="wrap_content"
-    card_view:cardUseCompatPadding="true"
-    android:layout_marginBottom="16dp">
+    android:layout_marginBottom="16dp"
+    card_view:cardUseCompatPadding="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,24 +14,22 @@
         <ImageView
             android:id="@+id/event_img"
             android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            android:contentDescription="@string/action_settings"
-            android:src="@drawable/ciudad_guzman"
-            android:scaleType="centerCrop" />
+            android:layout_height="@dimen/big_size_element"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ciudad_guzman" />
 
         <TextView
             android:id="@+id/event_name"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:textSize="15sp"
-            android:text="@string/dummy_button"
-            android:textColor="@color/colorAccent"
-            android:gravity="center"
-            android:layout_below="@+id/event_img"
-            android:paddingBottom="8dp"
-            android:paddingTop="8dp"
+            android:layout_height="@dimen/small_size_element"
             android:layout_alignParentBottom="true"
-            android:background="@color/colorPrimaryDark"/>
+            android:layout_below="@+id/event_img"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:paddingBottom="@dimen/activity_vertical_padding"
+            android:paddingTop="@dimen/activity_vertical_padding"
+            android:textColor="@color/colorWhite"
+            android:textSize="?android:textAppearanceSmall" />
 
     </RelativeLayout>
 

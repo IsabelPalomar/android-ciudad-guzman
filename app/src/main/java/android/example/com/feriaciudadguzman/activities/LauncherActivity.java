@@ -13,6 +13,7 @@ public class LauncherActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launcher);
 
+        //Initiates the MainActivity after 1000L
         Handler mHandler = new Handler();
         mHandler.postDelayed(new Runnable() {
             @Override

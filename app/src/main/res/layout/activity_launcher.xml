@@ -7,15 +7,14 @@
 
     <TextView
         android:id="@+id/fullscreen_content"
+        style="@style/applicationName"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_margin="16dp"
-        android:layout_weight="1"
+        android:layout_height="@dimen/big_size_element"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/activity_default_margin"
+        android:background="@color/black_overlay"
         android:gravity="center"
         android:keepScreenOn="true"
-        android:text="@string/app_name"
-        style="@style/applicationName"
-        android:background="@color/black_overlay"
-        android:layout_gravity="center" />
+        android:text="@string/app_name" />
 
 </FrameLayout>
