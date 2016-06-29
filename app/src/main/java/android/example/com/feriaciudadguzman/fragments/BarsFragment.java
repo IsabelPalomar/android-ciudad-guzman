@@ -1,9 +1,8 @@
 package android.example.com.feriaciudadguzman.fragments;
 
-import android.content.Context;
+
 import android.example.com.feriaciudadguzman.adapters.CustomRecyclerAdapter;
 import android.example.com.feriaciudadguzman.models.Place;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -17,15 +16,22 @@ import android.example.com.feriaciudadguzman.R;
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class RestaurantsFragment extends Fragment {
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class BarsFragment extends Fragment {
 
     private List<Place> places;
+
+    public BarsFragment() {
+        // Required empty public constructor
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view =  inflater.inflate(R.layout.fragment_restaurants, container, false);
+        View view =  inflater.inflate(R.layout.fragment_bars, container, false);
 
         initializeData();
 
@@ -45,21 +51,18 @@ public class RestaurantsFragment extends Fragment {
         }
 
         return view;
-
     }
-
 
     /**
      * Initialize the places using Place model
      */
     private void initializeData(){
         places = new ArrayList<>();
-        places.add(new Place("LoLa", "Casual dining. The food is prepared with fresh ingredients presented simply with a focus on flavor and quality.", "Lola Cocina-Copas-Cafe", R.drawable.restaurant_lola));
-        places.add(new Place("Tostadas Pepes", "Most famous and best tostadas around. Anybody that lives or visits Cd. Guzman knows that Pepe's is the best.", "Tostadas Pepes", R.drawable.restaurant_pepes));
-        places.add(new Place("Deguzman", "DeGuzman is a dining experience where you can enjoy regional and casual cuisine.", "DeGuzman restaurant", R.drawable.restaurant_deguzman));
-        places.add(new Place("Los Portales", "Los Portales has wonderful Mexican food, atmosphere and great customer service.", "Los Portales Restaurant ciudad guzman", R.drawable.restaurant_portales));
+        places.add(new Place("Zeed", "Zeed is a dance club that brings you EDM music. If you're looking for EDM in Ciudad Guzman, Zeed is a place to be.", "Av 1ro. de Mayo 148, Ciudad Guzman Centro", R.drawable.bar_zeed));
+        places.add(new Place("El muelle", "El muelle Bar and Tropical drinks is a Bar in Ciudad Guzman serving the best cocktails.", "Rio Bar Laguna", R.drawable.bar_muelle));
+        places.add(new Place("PM Concepto", "PM concepto is a bar where you can enjoy the best margaritas in town.", "PM Concepto Ciudad guzman", R.drawable.bar_pm));
+        places.add(new Place("Deja vu", " Kick back and cheer your team to victory as you enjoy some great cuisine and a nice cold beer.", "Melchor Ocampo 25A Ciudad Guzman", R.drawable.bar_dejavu));
 
     }
-
 
 }

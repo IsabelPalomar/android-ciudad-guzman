@@ -2,6 +2,7 @@ package android.example.com.feriaciudadguzman.activities;
 
 import android.content.res.Configuration;
 import android.example.com.feriaciudadguzman.R;
+import android.example.com.feriaciudadguzman.fragments.BarsFragment;
 import android.example.com.feriaciudadguzman.fragments.HomeFragment;
 import android.example.com.feriaciudadguzman.fragments.InformationFragment;
 import android.example.com.feriaciudadguzman.fragments.LandmarksFragment;
@@ -29,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Set Home Fragment
+        setHomeFragment();
+
+        //Set the toolbar and NavigationDrawer behavior
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -37,28 +42,26 @@ public class MainActivity extends AppCompatActivity {
         setupDrawerContent(nvDrawer);
 
         drawerToggle = setupDrawerToggle();
-        // Tie DrawerLayout events to the ActionBarToggle
         mDrawer.addDrawerListener(drawerToggle);
 
     }
 
-    private ActionBarDrawerToggle setupDrawerToggle() {
-        return new ActionBarDrawerToggle(this, mDrawer, toolbar, R.string.drawer_open,  R.string.drawer_close);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                mDrawer.openDrawer(GravityCompat.START);
-                return true;
+    /**
+     * By default we use the home Fragment to display the events information
+     */
+    private void setHomeFragment() {
+        Class fragmentClass = HomeFragment.class;
+        Fragment fragment = null;
+        try {
+            fragment = (Fragment) fragmentClass.newInstance();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
         }
 
-        if (drawerToggle.onOptionsItemSelected(item)) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
     }
 
     @Override
@@ -75,6 +78,19 @@ public class MainActivity extends AppCompatActivity {
         drawerToggle.onConfigurationChanged(newConfig);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                mDrawer.openDrawer(GravityCompat.START);
+                return true;
+        }
+
+        return drawerToggle.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
+
+    }
+
+
     private void setupDrawerContent(NavigationView navigationView) {
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
@@ -85,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
     }
+
 
     public void selectDrawerItem(MenuItem menuItem) {
         // Create a new fragment and specify the fragment to show based on nav item clicked
@@ -102,6 +119,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.nav_restaurants_fragment:
                 fragmentClass = RestaurantsFragment.class;
+                break;
+            case R.id.nav_bars_fragment:
+                fragmentClass = BarsFragment.class;
                 break;
             default:
                 fragmentClass = InformationFragment.class;
@@ -123,5 +143,8 @@ public class MainActivity extends AppCompatActivity {
         mDrawer.closeDrawers();
     }
 
+    private ActionBarDrawerToggle setupDrawerToggle() {
+        return new ActionBarDrawerToggle(this, mDrawer, toolbar, R.string.drawer_open,  R.string.drawer_close);
+    }
 
 }

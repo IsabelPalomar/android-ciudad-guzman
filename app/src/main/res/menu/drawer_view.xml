@@ -6,7 +6,7 @@
 
         <item
             android:id="@+id/nav_home_fragment"
-            android:icon="@drawable/ic_favorite_black_24dp"
+            android:icon="@drawable/ic_home_black_24dp"
             android:title="Home" />
 
         <item
@@ -19,15 +19,15 @@
                 <group android:checkableBehavior="single">
                     <item
                         android:id="@+id/nav_landmarks_fragment"
-                        android:icon="@drawable/ic_favorite_black_24dp"
+                        android:icon="@drawable/ic_grade_black_24dp"
                         android:title="Landmarks" />
                     <item
                         android:id="@+id/nav_restaurants_fragment"
-                        android:icon="@drawable/ic_favorite_black_24dp"
+                        android:icon="@drawable/ic_restaurant_black_24dp"
                         android:title="Restaurants" />
                     <item
                         android:id="@+id/nav_bars_fragment"
-                        android:icon="@drawable/ic_favorite_black_24dp"
+                        android:icon="@drawable/ic_local_bar_black_24dp"
                         android:title="Bars" />
                 </group>
             </menu>
