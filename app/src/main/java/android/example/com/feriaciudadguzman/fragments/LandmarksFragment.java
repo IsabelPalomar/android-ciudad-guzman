@@ -1,6 +1,6 @@
 package android.example.com.feriaciudadguzman.fragments;
 
-import android.example.com.feriaciudadguzman.adapters.CustomRecyclerAdapter;
+import android.example.com.feriaciudadguzman.adapters.PlacesRecyclerAdapter;
 import android.example.com.feriaciudadguzman.models.Place;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -35,8 +35,8 @@ public class LandmarksFragment extends Fragment {
             recyclerView.setLayoutManager(llm);
         }
 
-        //Creates a new a instance of CustomRecyclerAdapter, passing the current context and the list of categories
-        CustomRecyclerAdapter adapter = new CustomRecyclerAdapter(this.getContext(), places);
+        //Creates a new a instance of PlacesRecyclerAdapter, passing the current context and the list of categories
+        PlacesRecyclerAdapter adapter = new PlacesRecyclerAdapter(this.getContext(), places);
         if (recyclerView != null) {
             recyclerView.setAdapter(adapter);
         }

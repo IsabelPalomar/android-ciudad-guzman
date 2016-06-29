@@ -21,12 +21,12 @@ import java.util.List;
  * We are passing a list of "places" with an image resource, description and name.
  * When the user clicks one element(CardView) the application initiates a PlayerActivity
  */
-public class CustomRecyclerAdapter extends RecyclerView.Adapter<CustomRecyclerAdapter.PlaceViewHolder> {
+public class PlacesRecyclerAdapter extends RecyclerView.Adapter<PlacesRecyclerAdapter.PlaceViewHolder> {
 
     List<Place> places;
     Context context;
 
-    public CustomRecyclerAdapter(Context con, List<Place> places) {
+    public PlacesRecyclerAdapter(Context con, List<Place> places) {
         this.places = places;
         this.context = con;
     }
